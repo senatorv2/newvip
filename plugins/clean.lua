@@ -18,7 +18,7 @@ local function run(msg, matches)
     offset_ = 0,
     limit_ = tonumber(matches[2])
   }, cleanmsg, nil)
-             tg.sendMessage(msg.chat_id_, msg.id_, 1, '<b>clear chat </b> ['..matches[2]..']', 1, 'html')
+             tg.sendMessage(msg.chat_id_, msg.id_, 1, '<b>پاک شد</b> ['..matches[2]..']', 1, 'html')
          end
 end
 end
