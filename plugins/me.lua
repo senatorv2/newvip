@@ -1,9 +1,9 @@
 local function run(msg, matches)
-  if msg.content_.text_ == '/me' or '!me' or '#me' then
+  if msg.content_.text_ == 'من' then
     function get_pic(arg, data)
       if data.first_name_ then
 
-      tg.sendMessage(arg.chat_id, 0, 1, 'https://telegram.me/'..data.username_.. '\n <b>ID</b> : ' ..msg.from_id , 0, 'html')
+      tg.sendMessage(arg.chat_id, 0, 1, 'https://telegram.me/'..data.username_.. '\n <b>ایدی</b> : ' ..msg.from_id , 0, 'html')
 
       end
     end
@@ -17,10 +17,10 @@ end
 
 return {
 patterns = {
-"^[/!#](me)$"
+"^من$"
 
 },
 run = run
 }
 
---@mafia_cli
+--@Lv_t_m
