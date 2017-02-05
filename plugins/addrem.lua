@@ -49,9 +49,9 @@ end
 end
 
 local function run(msg, matches)
-if matches[1] == 'add' and is_sudo(msg) then
+if matches[1] == 'اضافه' and is_sudo(msg) then
 addgroup(msg)
-elseif matches[1] == 'rem' and is_sudo(msg) then
+elseif matches[1] == 'حذف' and is_sudo(msg) then
 remgroup(msg)
 end
 end
