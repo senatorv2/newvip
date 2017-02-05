@@ -13,14 +13,14 @@ local function list_badwords(msg)
 	local result=''
 	if hash then
 		local names = redis:hkeys(hash)
-		local text = '<b>list filter</b> :\n\n'
+		local text = '<b>لیست فیلتر</b> :\n\n'
 		for i=1, #names do
 			result = result..'➣ '..names[i]..'\n'
 		end
 		if #result>0 then
 			return text..result
 		else
-			return'<b>Empty list</b>'
+			return'<b>لیست خالی است</b>'
 		end
 	end
 end
@@ -28,7 +28,7 @@ end
 local function clear_badwords(msg, var_name) 
 	local hash = get_badword_hash(msg)
 	redis:del(hash, var_name)
-	return '<b>Cleared list</b>'
+	return '<b>خالی شد لیست</b>'
 end
 
 local function list_badword2(msg, arg)
@@ -52,7 +52,7 @@ end
 local function clear_badword(msg, cmd_name)  
 	local hash = get_badword_hash(msg)
 	redis:hdel(hash, cmd_name)
-	return '<code>filter</code> '..cmd_name..' <code>Clean</code>'
+	return '<code>فیلتر</code> '..cmd_name..' <code>پاک شد</code>'
 end
 
 local function pre_process(msg)
@@ -103,5 +103,4 @@ return {
   pre_process = pre_process
 }
 
---channel : @mafia_cli
-
+--channel : @senator_tem
