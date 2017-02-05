@@ -19,7 +19,7 @@ tg.changeUsername('')
 elseif matches[1] == 'تغییر عکس' then
 tg.sendMessage(msg.chat_id_, 0, 1, 'لطفا تصویر را ارسال کنید.', 1, 'html')
 redis:set('botphoto','yes')
-elseif matches[1] == 'عکس' and redis:get('botphoto') then
+elseif matches[1] == 'photo' and redis:get('botphoto') then
 local file = 'bot/photos/bot.jpg'
 print('File downloaded to:', msg.content_.photo_.sizes_[0].photo_.path_)
 os.rename(msg.content_.photo_.sizes_[0].photo_.path_, file)
@@ -49,8 +49,8 @@ return {
 	"^حذف یوزرنیم $",
 	"^تنظیم عکس$",
     "^[#!/](markread) (.*)$",
-	"^!!!ویرایش:[#!/](markread) (.*)$",
-	"^!!!عکس:$",
+	"^!!!edit:[#!/](markread) (.*)$",
+	"^!!![photo]:$",
   },
   run = run
 }
