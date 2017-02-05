@@ -31,9 +31,9 @@ mute_audio = "no"
                   }
       }
       save_data(_config.group.data, group)
-tg.sendMessage(msg.chat_id, msg.id_, 1, 'SuperGroup ➣➣ added', 1)
+tg.sendMessage(msg.chat_id, msg.id_, 1, '<🚏>گروه از قبل در لیست ربات بود<🚏>', 1)
 else
-tg.sendMessage(msg.chat_id, msg.id_, 1, 'SuperGroup ➣➣ add', 1)
+tg.sendMessage(msg.chat_id, msg.id_, 1, '<🚏>گروه به لیست ربات اضافه شد<🚏>', 1)
 end
 end
 local function remgroup(msg)
@@ -42,9 +42,9 @@ local groupa = group[tostring(msg.chat_id)]
 if groupa then
 group[tostring(msg.chat_id)] = nil
       save_data(_config.group.data, group)
-tg.sendMessage(msg.chat_id, msg.id_, 1, 'SuperGroup ➣➣ removed', 1)
+tg.sendMessage(msg.chat_id, msg.id_, 1, '<🚏>گروه از قبل از لیست حذف شده بود<🚏>', 1)
 else
-tg.sendMessage(msg.chat_id, msg.id_, 1, 'SuperGroup ➣➣ remove', 1)
+tg.sendMessage(msg.chat_id, msg.id_, 1, '<🚏>گروه از لیست ربات حذف شد<🚏>', 1)
 end
 end
 
@@ -57,10 +57,10 @@ end
 end
 return {
   patterns = {
-    "^[/#!](add)$",
-    "^[/#!](rem)$",
- "^!!!edit:[/#!](add)$",
-    "^!!!edit:[/#!](rem)$"
+    "^اضافه$",
+    "^حذف$",
+ "^!!!edit:اضافه$",
+    "^!!!edit:حذف$"
   },
   run = run
 }
