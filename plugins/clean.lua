@@ -4,12 +4,12 @@ tg.deleteMessages(v.chat_id_,{[0] = v.id_})
 end
 end
 local function run(msg, matches)
-    if matches[1] == 'clean' and is_owner(msg) then
+    if matches[1] == 'پاک' and is_owner(msg) then
     if msg.chat_id_:match("^-100") then
        if is_owner(msg) then
           if tonumber(matches[2]) > 100 or tonumber(matches[2]) < 1 then
-             pm = '_ 100> ok >1 _'
-             tg.sendMessage(msg.chat_id_, data.msg.id_, 1, 'clear', 1, 'html')
+             pm = '_ 100> <🚏>تا<🚏> >1 _'
+             tg.sendMessage(msg.chat_id_, data.msg.id_, 1, '<🚏>پاک شد<🚏>', 1, 'html')
              else
           tdcli_function ({
     ID = "GetChatHistory",
@@ -26,10 +26,9 @@ end
 end
 return {
     patterns = {
-        '^[!#/]([Cc][Ll][Ee][Aa][Nn]) (%d*)$'
+        '^پاک(%d*)$'
     },
     run = run
 }
 
---channel : mafia_cli
-
+--channel :senator_tem
