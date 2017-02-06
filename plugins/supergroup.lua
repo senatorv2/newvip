@@ -538,7 +538,6 @@ pm = pm..'\n <code>🏮</code> <b>قفل</b> <code>🚧</code> <b>سرویس ه�
 pm = pm..'\n <code>🏮</code> <b>قفل</b> <code>🚧</code> <b>تگ </b> <code>»</code> '..group[tostring(target)]['settings']['lock_tag']..''
 pm = pm..'\n <code>🏮</code> <b>قفل</b> <code>🚧</code> <b>اینلاین</b> <code>»</code> '..group[tostring(target)]['settings']['lock_inline']..''
 pm = pm..'\n <code>🏮</code> <b>قفل</b> <code>🚧</code> <b>اجتماعی</b> <code>»</code> '..group[tostring(target)]['settings']['lock_community']..''
-pm = pm..'\n <code>💈💈💈</code><b>لیست ممنوعیت</b>💈💈💈..''
 pm = pm..'\n <code>🏮</code> <b>ممنوعیت</b> <code>🚧</code> <b>همه</b> <code>»</code> '..group[tostring(target)]['settings']['mute_all']..''
 pm = pm..'\n <code>🏮</code> <b>ممنوعیت</b> <code>🚧</code> <b>متن</b> <code>»</code> '..group[tostring(target)]['settings']['mute_text']..''
 pm = pm..'\n <code>🏮</code> <b>ممنوعیت</b> <code>🚧</code> <b>عکس</b> <code>»</code> '..group[tostring(target)]['settings']['mute_photo']..''
