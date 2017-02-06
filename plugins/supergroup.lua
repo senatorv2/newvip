@@ -548,7 +548,7 @@ pm = pm..'\n <code>🏮</code> <b>ممنوعیت</b> <code>🚧</code> <b>یاد
 pm = pm..'\n <code>🏮</code> <b>ممنوعیت</b> <code>🚧</code> <b>آهنگ</b> <code>»</code> '..group[tostring(target)]['settings']['mute_audio']..''
 pm = pm..'\n <code>🏮</code> <b>ممنوعیت</b> <code>🚧</code> <b>گیف</b> <code>»</code> '..group[tostring(target)]['settings']['mute_gif']..''
 --pm = '<code>💈💈💈💈💈💈💈💈💈</code>'
-pm = pm..'\n <code>💈💈💈💈💈💈💈💈💈</code> \n <b> senator_tem </b>'
+pm = pm..'\n <code>💈💈💈💈💈💈💈💈💈</code> \n '
 
 tg.sendMessage(msg.chat_id_, 0, 1, pm, 1, 'html')
 end
